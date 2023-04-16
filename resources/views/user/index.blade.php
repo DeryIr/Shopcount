@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title> Shoup Count</title>
+    <link rel="icon" href="img/logo.png">
+    <title>Shoup Count</title>
     @include('user/header')
 </head>
 
@@ -276,7 +277,7 @@
                     <img src="img/board.jpg" width="90%" class="img-fluid" alt="Bantuan 24/7">
                 </div>
                 <div class="col-lg-6">
-                    <h2><strong>Trusted Board atau Testimoni</strong></h2>
+                    <h2><strong>Testimoni</strong></h2>
                     <p align="justify">Trusted Board atau Testimoni terdiri dari pernyataan tertulis atau lisan yang
                         berisi kepuasan atau ketidakpuasan konsumen terhadap suatu produk atau jasa yang dibeli dan
                         digunakan.

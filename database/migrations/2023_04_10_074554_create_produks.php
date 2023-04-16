@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_produk');
             $table->text('gambar')->nullable();
-            $table->string('harga_produk');
+            $table->integer('harga_produk');
             $table->enum('kategory', ['Steam', 'Supercell', 'Xbox', 'Epic_game', 'Moonton', 'Pubgm']);
             $table->text('deskripsi');
             $table->timestamps();

@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->text('alamat');
             $table->string('email');
             $table->string('no_hp');
-            $table->enum('status', ['Belum Lunas', 'Lunas']);
-            $table->date('tanggal');
+            $table->bigInteger('harga_produk');
+            $table->string('nama_produk');
             $table->timestamps();
+            $table->enum('status', ['Unpaid', 'paid']);
         });
     }
 

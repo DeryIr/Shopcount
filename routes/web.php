@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DetailorderController;
 use App\Http\Controllers\EpicgamesController;
 use App\Http\Controllers\MoontonController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PesanController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\PubgmController;
@@ -106,10 +108,9 @@ Route::get('/datakeuangan', function () {
 
 
 
-// transaksi
-Route::get('/order', function () {
-    return view('transaksi/order');
-});
+// Route::get('/detailorder', function () {
+//     return view('transaksi/detailorder');
+// });
 
 Route::get('/login', [SessionController::class, 'index']);
 Route::post('/sesi/login', [SessionController::class, 'login']);
@@ -146,4 +147,7 @@ Route::get('/dataproduk/{id}/edit', [ProdukController::class, 'edit']);
 Route::put('/dataproduk/{id}', [ProdukController::class, 'update']);
 Route::delete('/dataproduk/{id}', [ProdukController::class, 'delete']);
 
-Route::get('/{produk}', [ProdukController::class, 'show'])->name('user.pesan');
+Route::get('/produk{produk}', [ProdukController::class, 'show'])->name('user.pesan');
+Route::get('/order{order}', [OrderController::class, 'order'])->name('transaksi.order');
+// Route::get('/detailorder{detailorder}', [DetailorderController::class, 'detailorder'])->name('transaksi.detailorder');
+Route::post('/checkout', [OrderController::class, 'checkout']);

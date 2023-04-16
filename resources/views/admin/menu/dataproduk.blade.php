@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin | User</title>
+    <title>Admin | Produk</title>
     @include('admin/header')
 </head>
 <style>
@@ -135,7 +135,7 @@
                                     <p>{!! nl2br($produk->deskripsi) !!}</p>
                                 </td>
                                 <td>
-                                    <p>Rp. {{ $produk->harga_produk }}</p>
+                                    <p>Rp. {{ number_format($produk->harga_produk) }}</p>
                                 </td>
                                 <td>
                                     <p>{{ $produk->kategory }}</p>

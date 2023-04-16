@@ -70,7 +70,7 @@
                                         class="text-reset ">
                                         <p>Supercell Account</p>
                                     </a>
-                                    <h6 class="mb-3 price">Rp. {{ $produksupercell->harga_produk }}</h6>
+                                    <h6 class="mb-3 price">Rp. {{ number_format($produksupercell->harga_produk) }}</h6>
                                 </div>
                             </div>
                         </section>

@@ -11,29 +11,23 @@
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom footer">
         <!-- Left -->
         <div class="me-5 d-none d-lg-block link-light">
-            <span>Get connected with us on social networks:</span>
+            <span>Media sosial kami :</span>
         </div>
         <!-- Left -->
 
         <!-- Right -->
         <div>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-facebook-f"></i>
+            <a href="mailto:shopcount45@gmail.com?" class="me-4 link-secondary">
+                <i class="far fa-envelope" style="color: #ffffff;"></i>
             </a>
             <a href="" class="me-4 link-secondary">
-                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram" style="color: #ffffff;"></i>
             </a>
             <a href="" class="me-4 link-secondary">
-                <i class="fab fa-google"></i>
+                <i class="fab fa-whatsapp" style="color: #ffffff;"></i>
             </a>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="me-4 link-secondary">
-                <i class="fab fa-github"></i>
+            <a href="https://github.com/DeryIr" class="me-4 link-secondary">
+                <i class="fab fa-github-square" style="color: #ffffff;"></i>
             </a>
         </div>
         <!-- Right -->

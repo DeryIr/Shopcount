@@ -8,6 +8,12 @@
     <title>Deskripsi Produk</title>
     @include('user/header')
 </head>
+<style>
+    imgproduk {
+        width: 400px;
+        height: 400px;
+    }
+</style>
 
 <body>
     @include('user/navbar')
@@ -21,7 +27,7 @@
             <div class="row">
                 <!--Grid column-->
                 <div class="col-md-6 mb-4">
-                    <img src="{{ asset('img/store/' . $produk->gambar) }}" class="img-fluid" alt="" />
+                    <img src="{{ asset('img/store/' . $produk->gambar) }}" class="imgproduk img-fluid" alt="" />
                 </div>
                 <!--Grid column-->
 
@@ -34,7 +40,7 @@
                         </div>
 
                         <p class="lead">
-                            <span>Rp. {{ $produk->harga_produk }}</span>
+                            <span>Harga Rp. {{ number_format($produk->harga_produk) }}</span>
                         </p>
 
                         <strong>
@@ -46,7 +52,7 @@
                         <form class="d-flex justify-content-left">
                             <!-- Default input -->
                             @auth
-                                <a href="/order">
+                                <a href="{{ route('transaksi.order', $produk->id) }}">
                                     <button class="btn btn-primary ms-1" type="button">
                                         Beli Sekarang
                                         <i class="fas fa-shopping-cart ms-1"></i>

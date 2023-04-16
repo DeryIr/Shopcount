@@ -68,7 +68,7 @@
                                     <a href="{{ route('user.pesan', $produkxbox->id) }}" class="text-reset ">
                                         <p>Xbox Account</p>
                                     </a>
-                                    <h6 class="mb-3 price">Rp. {{ $produkxbox->harga_produk }}</h6>
+                                    <h6 class="mb-3 price">Rp. {{ number_format($produkxbox->harga_produk) }}</h6>
                                 </div>
                             </div>
                         </section>

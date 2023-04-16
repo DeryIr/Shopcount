@@ -65,4 +65,10 @@ class ProdukController extends Controller
             'produk' => $produk
         ]);
     }
+    public function order(produk $produk)
+    {
+        return view('transaksi.order', [
+            'produk' => $produk
+        ]);
+    }
 }

@@ -68,7 +68,7 @@
                                     <a href="{{ route('user.pesan', $produkmoonton->id) }}" class="text-reset ">
                                         <p>Moonton Account</p>
                                     </a>
-                                    <h6 class="mb-3 price">Rp. {{ $produkmoonton->harga_produk }}</h6>
+                                    <h6 class="mb-3 price">Rp. {{ number_format($produkmoonton->harga_produk) }}</h6>
                                 </div>
                             </div>
                         </section>

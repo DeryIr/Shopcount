@@ -117,20 +117,25 @@
     </div>
     <div class="containerorder d-lg-flex">
         <div class="box-1 user">
-            <div class="box-inner-1 pb-3 mb-3 ">
-                <div class="d-flex justify-content-between mb-3 userdetails">
-                    <p class="fw-bold">Nama Produk</p>
-                    <p class="fw-lighter"><span class="fas fa-dollar-sign"></span>harga produk</p>
+            <form action="/checkout" method="POST">
+                <div class="box-inner-1 pb-3 mb-3 ">
+                    <div class="d-flex justify-content-between mb-3 userdetails">
+                        <p class="fw-bold">{{ $produk->nama_produk }}</p>
+                        <input type="hidden" class="form-control" name="nama_produk" id="nama_produk" placeholder=""
+                            value="{{ $produk->nama_produk }}" required>
+                        <p class="fw-lighter">Rp. {{ $produk->harga_produk }}
+                            <input type="hidden" class="form-control" name="harga_produk" id="harga_produk"
+                                placeholder="" value="{{ $produk->harga_produk }}" required>
+                        </p>
+                    </div>
+                    <div>
+                        <img src="{{ asset('img/store/' . $produk->gambar) }}" class="d-block w-100">
+                    </div>
+                    <p class="fw-bold mt-3">Deskripsi
+                    </p>
+                    <p class="fw-lighter">{!! nl2br($produk->deskripsi) !!}
+                    </p>
                 </div>
-                <div>
-                    <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                        class="d-block w-100">
-                </div>
-                <p class="fw-bold mt-3">Deskripsi
-                </p>
-                <p class="fw-lighter">blablablabla
-                </p>
-            </div>
         </div>
         <div class="box-2">
             <div class="box-inner-2">
@@ -138,56 +143,35 @@
                     <p class="fw-bold">Lengkapi Data dirimu</p>
                     <p class="dis mb-3">Silahkan isi data diri anda dengan lengkap dan benar!</p>
                 </div>
-                <form action="">
-                    <div>
-                        <p class="dis fw-bold mb-2">Nama</p>
-                        <input class="form-control" type="text">
+                @csrf
+                <div>
+                    <p class="dis fw-bold mb-2">Nama</p>
+                    <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Dengan Benar"
+                        required oninvalid="this.setCustomValidity('Wajib Di Isi !!!')"
+                        oninput="this.setCustomValidity('')">
+                </div>
+                <div>
+                    <p class="dis fw-bold mb-2">Email</p>
+                    <input type="email" class="form-control" name="email" placeholder="Masukkan Email dengan benar"
+                        required oninvalid="this.setCustomValidity('Wajib Di Isi Dan harap menggunakan @')"
+                        oninput="this.setCustomValidity('')">
+                </div>
+                <div>
+                    <p class="dis fw-bold mb-2">No Whatapps</p>
+                    <input type="text" class="form-control" name="no_hp" placeholder="Nomer WhatsApps" required
+                        oninvalid="this.setCustomValidity('Wajib Di Isi !!!')" oninput="this.setCustomValidity('')">
+                </div>
+                <div class="d-flex flex-column dis mt-3">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <p class="fw-bold">Total</p>
+                        <p class="fw-bold"></span>Rp.
+                            {{ number_format($produk->harga_produk) }}</p>
                     </div>
-                    <div>
-                        <p class="dis fw-bold mb-2">Email</p>
-                        <input class="form-control" type="email">
+                    <div class="form-group">
+                        <button type="submit" class="form-control btn btn-primary submit px-3">Lanjutkan</button>
                     </div>
-                    <div>
-                        <p class="dis fw-bold mb-2">No Whatapps</p>
-                        <input class="form-control" type="number">
-                    </div>
-                    <div>
-                        <p class="dis fw-bold mb-2">Alamat</p>
-                        <textarea class="form-control"></textarea>
-                    </div>
-                    <div class="d-flex flex-column dis mt-3">
-                        <div class="d-flex align-items-center justify-content-between mb-2">
-                            <p class="fw-bold">Total</p>
-                            <p class="fw-bold"><span class="fas fa-dollar-sign"></span>35.80</p>
-                        </div>
-                        <button class="w-100 btn btn-primary btn-lg" data-bs-target="#confirmModal" type="button">Bayar
-                            Rp35.80</button>
-
-                    </div>
-                    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="confirmModalLabel">Lanjutkan Ke Pembayaran</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Pastikan data diri anda sudah sesuai! </br></br> Apakah Anda yakin ingin
-                                    melanjutkan?
-                                    data anda akan masuk ke admin dalam status belum bayar, segera lakukan
-                                    pembayaran cashless atau dapat melakukan pembayaran lewat petugas
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Batal</button>
-                                    <button type="submit" class="btn btn-primary"
-                                        data-bs-dismiss="modal">lanjutkan</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <img src="img/payment.jpg" width="100%" class="img-fluid">
                 </form>
             </div>
         </div>

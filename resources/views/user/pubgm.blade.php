@@ -68,7 +68,7 @@
                                     <a href="{{ route('user.pesan', $produkpubgm->id) }}" class="text-reset ">
                                         <p>Pubgm Account</p>
                                     </a>
-                                    <h6 class="mb-3 price">Rp. {{ $produkpubgm->harga_produk }}</h6>
+                                    <h6 class="mb-3 price">Rp. {{ number_format($produkpubgm->harga_produk) }}</h6>
                                 </div>
                             </div>
                         </section>
