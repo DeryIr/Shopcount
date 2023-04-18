@@ -156,29 +156,38 @@
         color: white;
     }
 </style>
-<nav class="navbar bg-body-tertiary fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
     <div class="container-fluid">
-        <a class="navbar-brand" href="Index.php">
-            <img src="img/Logo2.png" alt="Logo" width="170" height="40" class="d-inline-block align-text-top">
-        </a>
-        <div class="dropdown">
-            @auth
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-mdb-toggle="dropdown" aria-expanded="false">
-                        {{ auth()->user()->nama }}
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="/sesi/logout">Keluar</a></li>
-                    </ul>
-                </div>
-            @endauth
-            @guest
-                <a class="me-3 py-2 text-dark text-decoration-none btn btn-secondary" href="/register">Daftar</a>
-                <a class="py-2 text-dark-decoration-none btn btn-primary" href="/login">Masuk</a>
-            @endguest
-            </ul>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="navbar-brand" href="/">
+                <img src="img/Logo2.png" alt="Logo" width="170" height="40"
+                    class="d-inline-block align-text-top">
+            </a>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="dropdown">
+                @auth
+                    <div class="dropdown">
+                        <button class="btn btn btn-outline-primary dropdown-toggle" data-mdb-ripple-color="dark"
+                            type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                            {{ auth()->user()->nama }}
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="/sesi/logout">Keluar</a></li>
+                        </ul>
+                    </div>
+                @endauth
+                @guest
+                    <a class="me-3 py-2 text-dark text-decoration-none btn btn-secondary" href="/register">Daftar</a>
+                    <a class="py-2 text-dark-decoration-none btn btn-primary" href="/login">Masuk</a>
+                @endguest
+                </ul>
 
+            </div>
         </div>
     </div>
 </nav>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/logo.png">
     <title>Admin | User</title>
     @include('admin/header')
 </head>
@@ -38,8 +39,54 @@
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
-
-
+            <div class="card-body table-bordered-responsive p-0 mx-3">
+                <table class="table align-middle mb-0 table-bordered display table-striped table-bordered"
+                    id="example">
+                    <thead>
+                        <tr class="bg-secondary text-center">
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>No Whatsapps</th>
+                            <th>Nama produk</th>
+                            <th>Status</th>
+                            <th>Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($data as $keuangan)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>
+                                    <p>{{ $keuangan->nama }}</p>
+                                </td>
+                                <td>
+                                    <p>{{ $keuangan->email }}</p>
+                                </td>
+                                <td>
+                                    <p>{{ $keuangan->no_hp }}</p>
+                                </td>
+                                <td>
+                                    <p>{{ $keuangan->nama_produk }}</p>
+                                </td>
+                                <td>
+                                    <p>{{ $keuangan->status }}</p>
+                                </td>
+                                <td>
+                                    <p>Rp. {{ number_format($keuangan->harga_produk) }}</p>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="6" style="text-align:right">Total:</th>
+                            <th colspan="1">Rp {{ number_format($total_harga) }}
+                            </th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
         <!-- /.content-wrapper -->
         @include('admin/footer')

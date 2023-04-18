@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/logo.png">
     <title>Admin | User</title>
     @include('admin/header')
 </head>
@@ -73,7 +74,8 @@
             </div>
 
             <div class="card-body table-bordered-responsive p-0 mx-3">
-                <table class="table align-middle mb-0 table-bordered">
+                <table class="table align-middle mb-0 table-bordered display table-striped table-bordered"
+                    id="example">
                     <thead>
                         <tr class="bg-secondary text-center">
                             <th>No</th>
@@ -136,8 +138,6 @@
                     </tbody>
                 </table>
             </div>
-
-
         </div>
         <!-- /.content-wrapper -->
         @include('admin/footer')

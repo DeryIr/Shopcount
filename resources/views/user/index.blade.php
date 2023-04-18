@@ -40,7 +40,7 @@
     <div class="p-5">
         <section class="text-center">
             <div id="akun">
-                <h4 class="mb-5"><strong>This Is a Product From Shopcount</strong></h4>
+                <h2 class="text-center mb-5"><strong>Ini Adalah Produk Dari Shopcount</strong></h2>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-12 mb-4">
@@ -59,7 +59,7 @@
                             <p class="card-text">
                                 Produk dari steam account
                             </p>
-                            <a href="/steam" class="btn btn-dark">Button</a>
+                            <a href="/steam" class="btn btn-dark">Lihat Produk</a>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                             <p class="card-text">
                                 Produk dari supercell account
                             </p>
-                            <a href="/supercell" class="btn btn-dark">Button</a>
+                            <a href="/supercell" class="btn btn-dark">Lihat Produk</a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                             <p class="card-text">
                                 Produk dari xbox account
                             </p>
-                            <a href="/xbox" class="btn btn-dark">Button</a>
+                            <a href="/xbox" class="btn btn-dark">Lihat Produk</a>
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
                             <p class="card-text">
                                 Produk dari epic games account
                             </p>
-                            <a href="/epicgames" class="btn btn-dark">Button</a>
+                            <a href="/epicgames" class="btn btn-dark">Lihat Produk</a>
                         </div>
                     </div>
                 </div>
@@ -142,7 +142,7 @@
                             <h5 class="card-title">MOONTON</h5>
                             <p class="card-text">Produk dari moonton account
                             </p>
-                            <a href="/moonton" class="btn btn-dark">Button</a>
+                            <a href="/moonton" class="btn btn-dark">Lihat Produk</a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@
                             <p class="card-text">
                                 Produk dari PlayerUnknown's Battlegrounds mobile
                             </p>
-                            <a href="/pubgm" class="btn btn-dark">Button</a>
+                            <a href="/pubgm" class="btn btn-dark">Pilih</a>
                         </div>
                     </div>
                 </div>
@@ -205,10 +205,11 @@
 
     <div>
         <div class="paket-h1">
-            <h2 class="text-center mb-5"><strong>Account Games</strong></h2>
+            <h2 class="text-center mb-2"><strong>Link Menuju Perusahaan</strong>
+            </h2>
         </div>
         <div class="row row-cols-1 p-4 row-cols-md-6 g-0">
-            <div class="col">
+            <div class="col" style="margin-bottom: 20px;">
                 <div class="card h-100">
                     <a href="https://store.steampowered.com/" class="text-black">
                         <img src="img/steam_logo.png" class="card-img-top" alt="Hollywood Sign on The Hill" />
@@ -218,7 +219,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" style="margin-bottom: 20px;">
                 <div class="card h-100">
                     <a href="https://supercell.com/en/" class="text-black">
                         <img src="img/supercell_logo.png" class="card-img-top" alt="Hollywood Sign on The Hill" />
@@ -228,7 +229,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" style="margin-bottom: 20px;">
                 <div class="card h-100">
                     <a href="https://www.xbox.com/id-ID/" class="text-black">
                         <img src="img/xbox_logo.png" class="card-img-top" alt="Hollywood Sign on The Hill" />
@@ -238,7 +239,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" style="margin-bottom: 20px;">
                 <div class="card h-100">
                     <a href="https://store.epicgames.com/en-US/" class="text-black">
                         <img src="img/Epic_logo.png" class="card-img-top" alt="Palm Springs Road" />
@@ -248,7 +249,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" style="margin-bottom: 20px;">
                 <div class="card h-100">
                     <a href="https://m.mobilelegends.com/" class="text-black">
                         <img src="img/moonton_logo.png" class="card-img-top" alt="Los Angeles Skyscrapers" />
@@ -258,7 +259,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" style="margin-bottom: 20px;">
                 <div class="card h-100">
                     <a href="https://www.pubgmobile.com/id/home.shtml" class="text-black">
                         <img src="img/pubg_logo.png" class="card-img-top" alt="Skyscrapers" />
@@ -269,28 +270,32 @@
                 </div>
             </div>
         </div>
-    </div>
-    <section id="bantuan" class="m-3 py-1">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" id="kontak">
-                    <img src="img/board.jpg" width="90%" class="img-fluid" alt="Bantuan 24/7">
-                </div>
-                <div class="col-lg-6">
-                    <h2><strong>Testimoni</strong></h2>
-                    <p align="justify">Trusted Board atau Testimoni terdiri dari pernyataan tertulis atau lisan yang
-                        berisi kepuasan atau ketidakpuasan konsumen terhadap suatu produk atau jasa yang dibeli dan
-                        digunakan.
-                        Kesaksian dapat berupa penilaian pengalaman bertransaksi, pelayanan, kegunaan, dan mutu produk
-                        atau jasa. Kesaksian dapat digunakan untuk mengukur mutu produk atau jasa yang ditawarkan dan
-                        mengukur tingkat kepuasan konsumen.</p>
-                    <a href="/trusted"> <button type="button" class="btn btn-primary btn-rounded">
-                            Selengkapnya</button></a>
+
+        <section id="bantuan" class="m-3 py-1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6" id="kontak">
+                        <img src="img/board.jpg" width="70%" class="center img-fluid" alt="Bantuan 24/7">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2><strong>Testimoni</strong></h2>
+                        <p align="justify">Trusted Board atau Testimoni terdiri dari pernyataan tertulis atau lisan
+                            yang
+                            berisi kepuasan atau ketidakpuasan konsumen terhadap suatu produk atau jasa yang dibeli dan
+                            digunakan.
+                            Kesaksian dapat berupa penilaian pengalaman bertransaksi, pelayanan, kegunaan, dan mutu
+                            produk
+                            atau jasa. Kesaksian dapat digunakan untuk mengukur mutu produk atau jasa yang ditawarkan
+                            dan
+                            mengukur tingkat kepuasan konsumen.</p>
+                        <a href="/testimoni"> <button type="button" class="btn btn btn-outline-info btn-rounded"
+                                data-mdb-ripple-color="dark">
+                                Selengkapnya</button></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    @include('user/footer')
+        </section>
+        @include('user/footer')
 </body>
 
 </html>

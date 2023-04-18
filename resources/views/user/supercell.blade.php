@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/logo.png">
     <title>Supercell</title>
 
     @include('user/header')
@@ -62,12 +63,10 @@
                                     </a>
                                 </div>
                                 <div class="card-body text-center">
-                                    <a href="href="{{ route('user.pesan', $produksupercell->id) }}"
-                                        class="text-reset">
+                                    <a href="{{ route('user.pesan', $produksupercell->id) }}" class="text-reset">
                                         <h5 class="card-title mb-2">{{ $produksupercell->nama_produk }}</h5>
                                     </a>
-                                    <a href="href="{{ route('user.pesan', $produksupercell->id) }}"
-                                        class="text-reset ">
+                                    <a href="{{ route('user.pesan', $produksupercell->id) }}" class="text-reset ">
                                         <p>Supercell Account</p>
                                     </a>
                                     <h6 class="mb-3 price">Rp. {{ number_format($produksupercell->harga_produk) }}</h6>

@@ -17,13 +17,13 @@
 
         <!-- Right -->
         <div>
-            <a href="mailto:shopcount45@gmail.com?" class="me-4 link-secondary">
+            <a href="mailto:shopcount45@gmail.com" class="me-4 link-secondary">
                 <i class="far fa-envelope" style="color: #ffffff;"></i>
             </a>
-            <a href="" class="me-4 link-secondary">
+            <a href="https://instagram.com/irnanto_dery?igshid=ZDdkNTZiNTM=" class="me-4 link-secondary">
                 <i class="fab fa-instagram" style="color: #ffffff;"></i>
             </a>
-            <a href="" class="me-4 link-secondary">
+            <a href="https://api.whatsapp.com/send?phone=6285602904362" class="me-4 link-secondary">
                 <i class="fab fa-whatsapp" style="color: #ffffff;"></i>
             </a>
             <a href="https://github.com/DeryIr" class="me-4 link-secondary">
@@ -106,7 +106,7 @@
 
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-        © 2021 Copyright:
+        © 2023 Copyright:
         <a class="text-reset fw-bold" href="Index.php">ShopCount</a>
     </div>
     <!-- Copyright -->

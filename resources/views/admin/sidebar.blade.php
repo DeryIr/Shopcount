@@ -51,12 +51,20 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-header">KEUANGAN</li>
                 <li class="nav-item">
                     <a href="/datakeuangan" class="nav-link">
                         <i class="nav-icon fas fa-scroll"></i>
                         <p>
                             Total Pemasukan
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-header">Testimoni</li>
+                <li class="nav-item">
+                    <a href="/datatestimoni" class="nav-link">
+                        <i class="nav-icon fas fa-comments"></i>
+                        <p>
+                            Testimoni
                         </p>
                     </a>
                 </li>

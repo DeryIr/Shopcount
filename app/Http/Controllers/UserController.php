@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\order;
 use App\Models\produk;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -47,7 +48,21 @@ class UserController extends Controller
     {
         $Totaluser = User::all()->count();
         $Totalproduk = produk::all()->count();
+        $Totalorder = order::all()->count();
+        $Totallunas = Order::where('status', 'Lunas')->count();
+        $Totalbelumlunas = Order::where('status', 'Belum Lunas')->count();
+        $Totalkeuanganlunas = Order::where('status', 'Lunas')->sum('harga_produk');
+        $Totalkeuanganbelumlunas = Order::where('status', 'Belum Lunas')->sum('harga_produk');
 
-        return view('admin.admin', compact('Totaluser', 'Totalproduk'));
+
+        return view('admin.admin', compact(
+            'Totaluser',
+            'Totalproduk',
+            'Totalorder',
+            'Totallunas',
+            'Totalbelumlunas',
+            'Totalkeuanganlunas',
+            'Totalkeuanganbelumlunas'
+        ));
     }
 }

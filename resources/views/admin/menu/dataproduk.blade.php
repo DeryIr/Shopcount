@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/logo.png">
     <title>Admin | Produk</title>
     @include('admin/header')
 </head>
@@ -108,7 +109,8 @@
             </div>
 
             <div class="card-body table-bordered-responsive p-0 mx-3">
-                <table class="table align-middle mb-0 table-bordered">
+                <table class="table align-middle mb-0 table-bordered display table-striped table-bordered"
+                    id="example">
                     <thead>
                         <tr class="bg-secondary text-center">
                             <th>No</th>
@@ -149,8 +151,8 @@
                                                     class="fas fa-edit">
                                                 </i></button>
                                             <!-- Modal -->
-                                            <div class="modal fade bd-edit-modal-lg-{{ $produk->id }}" tabindex="-1"
-                                                role="dialog" aria-labelledby="myLargeModalLabel"
+                                            <div class="modal fade bd-edit-modal-lg-{{ $produk->id }}"
+                                                tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
                                                 aria-hidden="true">
                                                 <div class="modal-dialog modal-lg-{{ $produk->id }}">
                                                     <div class="modal-content p-3">
