@@ -49,32 +49,43 @@
                         </strong>
 
                         <p>{!! nl2br($produk->deskripsi) !!}</p>
-
-                        <form class="d-flex justify-content-left">
-                            <!-- Default input -->
-                            @auth
-                                <a href="{{ route('transaksi.order', $produk->id) }}">
-                                    <button class="btn btn-primary ms-1" type="button">
-                                        Beli Sekarang
-                                        <i class="fas fa-shopping-cart ms-1"></i>
-                                    </button>
-                                </a>
-                            @endauth
-                            @guest
-                                <a href="/login">
-                                    <button class="btn btn-primary ms-1" type="button">
-                                        Beli Sekarang
-                                        <i class="fas fa-shopping-cart ms-1"></i>
-                                    </button>
-                                </a>
-                            @endguest
+                        <div>
+                            <form class="d-flex justify-content-left">
+                                <!-- Default input -->
+                                @auth
+                                    <a href="{{ route('transaksi.order', $produk->id) }}">
+                                        <button class="btn btn-primary ms-1" type="button">
+                                            Beli Sekarang
+                                            <i class="fas fa-shopping-cart ms-1"></i>
+                                        </button>
+                                    </a>
+                                @endauth
+                                @guest
+                                    <a href="/login">
+                                        <button class="btn btn-primary ms-1" type="button">
+                                            Beli Sekarang
+                                            <i class="fas fa-shopping-cart ms-1"></i>
+                                        </button>
+                                    </a>
+                            </div>
+                        @endguest
                         </form>
+                        <a class="btn btn-success ms-1 mt-3" target="_blank"
+                            href="https://wa.me/6285602904362?text=Halo%20penjual%20shopcouunt%20saya%20ingin%20bertanya%20mengenai%20produk%20{{ $produk->nama_produk }}%20terimakasih%20">
+                            <i class="fab fa-whatsapp"></i> Hubungi Penjual
+                        </a>
+                        <div class="alert alert-danger mt-3" role="alert">
+                            <h4 class="alert-heading">Deskripsi Produk</h4>
+                            <p>Ingin mengetahui deskripsi produk dengan detail silahkan hubungan
+                                penjual di link whatsapp atas</p>
+                        </div>
                     </div>
-                    <!--Content-->
                 </div>
-                <!--Grid column-->
+                <!--Content-->
             </div>
-            <!--Grid row-->
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
 
         </div>
     </main>

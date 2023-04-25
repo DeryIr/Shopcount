@@ -14,6 +14,37 @@ class SessionController extends Controller
     {
         return view("user/login");
     }
+    // function login(Request $request)
+    // {
+    //     Session::flash('email', $request->email);
+    //     $request->validate([
+    //         'email' => 'required',
+    //         'password' => 'required'
+    //     ], [
+    //         'email.required' => "email wajib diisi",
+    //         'password.required' => "password wajib diisi"
+    //     ]);
+
+    //     $infologin = [
+    //         'email' => $request->email,
+    //         'password' => $request->password,
+    //         'role' => 'admin'
+    //     ];
+    //     if (Auth::attempt($infologin)) {
+    //         return redirect('/admin');
+    //     } else {
+    //         $infologin = [
+    //             'email' => $request->email,
+    //             'password' => $request->password,
+    //             'role' => 'user'
+    //         ];
+    //         if (Auth::attempt($infologin)) {
+    //             return redirect('/');
+    //         } else {
+    //             return redirect('/login');
+    //         }
+    //     }
+    // }
     function login(Request $request)
     {
         Session::flash('email', $request->email);
@@ -28,22 +59,20 @@ class SessionController extends Controller
         $infologin = [
             'email' => $request->email,
             'password' => $request->password,
-            'role' => 'admin'
         ];
-        if (Auth::attempt($infologin)) {
+
+        // cek apakah user dengan role admin berhasil login
+        if (Auth::attempt($infologin + ['role' => 'admin'])) {
             return redirect('/admin');
-        } else {
-            $infologin = [
-                'email' => $request->email,
-                'password' => $request->password,
-                'role' => 'user'
-            ];
-            if (Auth::attempt($infologin)) {
-                return redirect('/');
-            } else {
-                return redirect('/login');
-            }
         }
+
+        // cek apakah user dengan role user berhasil login
+        if (Auth::attempt($infologin + ['role' => 'user'])) {
+            return redirect('/');
+        }
+
+        // jika tidak berhasil login, maka kembalikan ke halaman login
+        return redirect('/login');
     }
 
     function logout()

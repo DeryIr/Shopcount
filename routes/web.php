@@ -63,14 +63,38 @@ Route::get('/sidebaradmin', function () {
 
 
 Route::get('/login', [SessionController::class, 'index']);
-Route::post('/sesi/login', [SessionController::class, 'login']);
 Route::get('/sesi/logout', [SessionController::class, 'logout']);
 Route::post('/sesi/create', [SessionController::class, 'create']);
 Route::get('/sesi/register', [SessionController::class, 'register']);
+Route::post('/sesi/login', [SessionController::class, 'login']);
 Route::group(
     ['middleware' => ['auth', 'admin']],
     function () {
-        Route::get('/admin/admin', [AdminController::class, 'dashboard']);
+        Route::get('/admin', [AdminController::class, 'dashboard']);
+        Route::get('admin', [UserController::class, 'jumlah']);
+
+        Route::get('/datauser', [UserController::class, 'user']);
+        Route::get('/datauser/create', [UserController::class, 'create']);
+        Route::post('/datauser/store', [UserController::class, 'store']);
+        Route::get('/datauser/{id}/edit', [UserController::class, 'edit']);
+        Route::put('/{id}', [UserController::class, 'update']);
+        Route::delete('/datauser/{id}', [UserController::class, 'delete']);
+
+        Route::get('/dataproduk', [ProdukController::class, 'produk']);
+        Route::get('/dataproduk/create', [ProdukController::class, 'create']);
+        Route::post('/dataproduk/store', [ProdukController::class, 'store']);
+        Route::get('/dataproduk/{id}/edit', [ProdukController::class, 'edit']);
+        Route::put('/dataproduk/{id}', [ProdukController::class, 'update']);
+        Route::delete('/dataproduk/{id}', [ProdukController::class, 'delete']);
+
+        Route::get('/datatestimoni', [TestimoniController::class, 'data']);
+        Route::delete('/datatestimoni/{id}', [TestimoniController::class, 'delete']);
+        Route::get('/datatestimoni/{id}', [TestimoniController::class, 'tampil']);
+
+        Route::get('/datapenjualan', [OrderController::class, 'data']);
+        Route::delete('/datapenjualan/{id}', [OrderController::class, 'delete']);
+        Route::get('/datapenjualan/{id}', [OrderController::class, 'lunas']);
+        Route::get('/datakeuangan', [OrderController::class, 'keuangan']);
     }
 );
 Route::get('/steam', [SteamController::class, 'produksteam']);
@@ -80,37 +104,14 @@ Route::get('/epicgames', [EpicgamesController::class, 'produkepicgames']);
 Route::get('/moonton', [MoontonController::class, 'produkmoonton']);
 Route::get('/pubgm', [PubgmController::class, 'produkpubgm']);
 
-Route::get('admin', [UserController::class, 'jumlah']);
 
-
-Route::get('/datauser', [UserController::class, 'user']);
-Route::get('/datauser/create', [UserController::class, 'create']);
-Route::post('/datauser/store', [UserController::class, 'store']);
-Route::get('/datauser/{id}/edit', [UserController::class, 'edit']);
-Route::put('/{id}', [UserController::class, 'update']);
-Route::delete('/datauser/{id}', [UserController::class, 'delete']);
-
-Route::get('/dataproduk', [ProdukController::class, 'produk']);
-Route::get('/dataproduk/create', [ProdukController::class, 'create']);
-Route::post('/dataproduk/store', [ProdukController::class, 'store']);
-Route::get('/dataproduk/{id}/edit', [ProdukController::class, 'edit']);
-Route::put('/dataproduk/{id}', [ProdukController::class, 'update']);
-Route::delete('/dataproduk/{id}', [ProdukController::class, 'delete']);
 
 Route::get('/produk{produk}', [ProdukController::class, 'show'])->name('user.pesan');
 Route::get('/order{order}', [OrderController::class, 'order'])->name('transaksi.order');
-// Route::get('/detailorder{detailorder}', [DetailorderController::class, 'detailorder'])->name('transaksi.detailorder');
 Route::post('/checkout', [OrderController::class, 'checkout']);
 Route::get('/invoice{id}', [OrderController::class, 'invoice'])->name('invoice');
 Route::post('/', [TestimoniController::class, 'store']);
 Route::get('/testimoni', [TestimoniController::class, 'testimoni']);
-Route::get('/datatestimoni', [TestimoniController::class, 'data']);
-Route::delete('/datatestimoni/{id}', [TestimoniController::class, 'delete']);
-Route::get('/datatestimoni/{id}', [TestimoniController::class, 'tampil']);
 
-Route::get('/datapenjualan', [OrderController::class, 'data']);
-Route::delete('/datapenjualan/{id}', [OrderController::class, 'delete']);
-Route::get('/datapenjualan/{id}', [OrderController::class, 'lunas']);
-Route::get('/datakeuangan', [OrderController::class, 'keuangan']);
 
 Route::get('/cetakinvoice{id}', [InvoiceController::class, 'print'])->name('invoice.cetak');

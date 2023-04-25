@@ -127,7 +127,7 @@
                             <p class="fw-bold">{{ $produk->nama_produk }}</p>
                             <input type="hidden" class="form-control" name="nama_produk" id="nama_produk" placeholder=""
                                 value="{{ $produk->nama_produk }}" required>
-                            <p class="fw-lighter">Rp. {{ $produk->harga_produk }}
+                            <p class="fw-lighter">Rp. {{ number_format($produk->harga_produk) }}
                                 <input type="hidden" class="form-control" name="harga_produk" id="harga_produk"
                                     placeholder="" value="{{ $produk->harga_produk }}" required>
                             </p>
